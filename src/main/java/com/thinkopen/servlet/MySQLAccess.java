@@ -385,7 +385,6 @@ public class MySQLAccess {
         return  ps.executeUpdate();
     }
 
-    @Nullable
     public User login(String email, String password) throws SQLException, ClassNotFoundException {
         final String query = "SELECT * FROM users WHERE email=? AND password=md5(?)";
 
